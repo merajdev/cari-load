@@ -1,0 +1,58 @@
+.user-section {
+    padding: 100px 0;
+}
+
+.user-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Inter;
+    color: #303030;
+    margin-bottom: 30px;
+}
+
+.user-section h2 span {
+    color: #0097B2;
+}
+
+.user-section .user-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: 1px solid #0097B2;
+    color: #fff;
+    border-radius: 12px;
+    max-width: 420px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-section .user-card:hover {
+    background-color: #0097B2;
+    color: #fff;
+}
+
+.user-section .user-card:hover h3,
+.user-section .user-card:hover p,
+.user-section .user-card:hover .bi-person-fill {
+    color: #fff;
+}
+
+.user-section .user-card .bi-person-fill {
+    font-size: 42px;
+    color: #0097B2;
+
+}
+
+.user-section .user-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Inter;
+    color: #0097B2;
+}
+
+.user-section .user-card p {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Inter;
+    color: #303030;
+
+}

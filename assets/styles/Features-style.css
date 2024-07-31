@@ -1,0 +1,39 @@
+.feature-section{
+    padding: 100px 0;
+}
+
+.feature-section h2{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: Inter;
+    color: #303030;
+
+    /* text-align: center; */
+    margin-bottom: 50px;
+}
+
+.feature-section h2 span{
+    color: #0097B2;
+}
+
+.feature-section .feature-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: #0097B2;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.feature-section .feature-card h3{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Inter;
+}
+
+.feature-section .feature-card img{
+    width: 50px;
+    margin-bottom: 20px;
+}
