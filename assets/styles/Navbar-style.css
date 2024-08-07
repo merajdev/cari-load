@@ -1,7 +1,6 @@
 .brand-logo {
     width: 125px;
 }
-
 .navbar-scrolled {
     background-color: #004a57;
     /* border-bottom: 1px solid #a2a2a2; */
@@ -15,33 +14,33 @@
 
 }
 
-.navbar-toggler:focus,
-.btn-close:focus {
+.navbar .navbar-toggler:focus,
+.navbar .btn-close:focus {
     outline: none;
     box-shadow: none;
 
 }
 
-.bi-text-center {
+.navbar .bi-text-center {
     color: #fff;
 }
 
-.offcanvas-header {
+.navbar .offcanvas-header {
     background-color: #000;
 }
 
-.offcanvas-body {
+.navbar .offcanvas-body {
     background-color: #000;
 }
 
-.nav-item .nav-link {
+.navbar .nav-item .nav-link {
     color: #fff;
     font-size: 18px;
     font-family: Inter;
     font-weight: 500;
 }
 
-.nav-item .active {
+.navbar .nav-item .active {
     color: #0097B2 !important;
     font-size: 18px;
     font-family: Inter;
@@ -49,7 +48,7 @@
 }
 
 
-.sign-btn {
+.navbar .sign-btn {
     display: flex;
     align-items: center;
     border: none;
@@ -66,18 +65,18 @@
 
 }
 
-.sign-btn:hover {
+.navbar .sign-btn:hover {
     background-position: right center;
     color: #fff;
     text-decoration: none;
 }
 
 @media (min-width: 992px) {
-    .offcanvas-header {
+    .navbar .offcanvas-header {
         background-color: transparent;
     }
 
-    .offcanvas-body {
+    .navbar .offcanvas-body {
         background-color: transparent;
     }
 

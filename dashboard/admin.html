@@ -20,21 +20,64 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="../assets/styles/AdminDashboard-style.css">
+    <link rel="stylesheet" href="../assets/styles/Navbar-style.css">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.svg">
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-scrolled py-2">
+        <div class="container-fluid">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../assets/images/logo.svg" class='brand-logo' alt="Brand Logo" />
+            </a>
 
-    <!-- Main Wrapper -->
+            <div class="d-flex">
+                <a href='../login.html' class="navbar-toggler d-lg-none sign-btn">Sign in</a>
+
+                <button class="navbar-toggler bg-transparent border-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <i class="bi bi-text-center fs-2"></i>
+                </button>
+            </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        <img src="../assets/images/logo.svg" class='brand-logo' alt="Brand Logo" />
+                    </h5>
+
+                    <button type="button" class="btn-close bg-transparent border-0 ms-auto" data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                        <i class="bi bi-x-lg text-white"></i>
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul
+                        class="navbar-nav justify-content-end justify-content-lg-center align-items-lg-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='../about.html' class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='../contact.html' class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href='../blog.html' class="nav-link">Blog</a>
+                        </li>
+                    </ul>
+                    <a href='../login.html' class="sign-btn d-none d-lg-flex">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="main-wrapper my-5">
-
-        <!-- Page Content -->
         <div class="container">
             <div class="row m-0">
-
-                <!-- Sidebar -->
                 <div class="col-xl-3 col-lg-4 col-md-12 theiaStickySidebar">
                     <div class="settings-widget dash-profile mb-4">
                         <div class="settings-menu p-0 text-center">
@@ -58,138 +101,153 @@
                         <div class="settings-menu">
                             <h3 class="mb-0">DASHBOARD</h3>
                             <ul>
-                                <li class="nav-item active">
-                                    <a href="admin-dashboard.html" class="nav-link">
-                                        <i class="bi bi-house-door"></i> Admin Dashboard
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link d-flex align-items-center"
+                                        data-target="dashboard-section">
+                                        <i class="bi bi-house-door me-2"></i> Admin Dashboard
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admin-users.html" class="nav-link">
-                                        <i class="bi bi-person"></i> Users
+                                    <a href="#" class="nav-link d-flex align-items-center" data-target="loads-section">
+                                        <i class="bi bi-people me-2"></i> Users
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admin-reports.html" class="nav-link">
-                                        <i class="bi bi-bar-chart"></i> Reports
+                                    <a href="#" class="nav-link d-flex align-items-center"
+                                        data-target="messages-section">
+                                        <i class="bi bi-bar-chart me-2"></i> Reports
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="admin-settings.html" class="nav-link">
-                                        <i class="bi bi-gear"></i> Settings
+                                    <a href="#" class="nav-link d-flex align-items-center"
+                                        data-target="settings-section">
+                                        <i class="bi bi-gear me-2"></i> Settings
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="logout.html" class="nav-link">
-                                        <i class="bi bi-box-arrow-right"></i> Logout
+                                    <a href="../login.html" class="nav-link d-flex align-items-center text-danger">
+                                        <i class="bi bi-box-arrow-right me-2"></i> Logout
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- /Sidebar -->
-
-                <!-- Admin Dashboard -->
                 <div class="col-xl-9 col-lg-8 col-md-12">
-                    <div class="row">
-                        <div class="col-md-4 d-flex">
-                            <div class="card user-card w-100">
-                                <div class="card-body">
-                                    <div class="user-inner">
-                                        <h6>Total Users</h6>
-                                        <h4 class="user-text-success">1,245</h4>
+                    <div id="dashboard-section" class="content-section">
+
+                        <div class="row">
+                            <div class="col-md-4 d-flex">
+                                <div class="card user-card w-100">
+                                    <div class="card-body">
+                                        <div class="user-inner">
+                                            <h6>Total Users</h6>
+                                            <h4 class="user-text-success">1,245</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex">
+                                <div class="card user-card w-100">
+                                    <div class="card-body">
+                                        <div class="user-inner">
+                                            <h6>Active Users</h6>
+                                            <h4 class="user-text-info">987</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 d-flex">
+                                <div class="card user-card w-100">
+                                    <div class="card-body">
+                                        <div class="user-inner">
+                                            <h6>Pending Requests</h6>
+                                            <h4 class="user-text-warning">22</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 d-flex">
-                            <div class="card user-card w-100">
-                                <div class="card-body">
-                                    <div class="user-inner">
-                                        <h6>Active Users</h6>
-                                        <h4 class="user-text-info">987</h4>
+                        <div class="row">
+                            <!-- Place these within your dashboard content where appropriate -->
+                            <div class="col-md-12">
+                                <div class="card user-card">
+                                    <div class="card-header">
+                                        <h4>Recent Activity</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="activity_chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card user-card">
+                                    <div class="card-header">
+                                        <h4>Statistics</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="stats_chart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 d-flex">
-                            <div class="card user-card w-100">
-                                <div class="card-body">
-                                    <div class="user-inner">
-                                        <h6>Pending Requests</h6>
-                                        <h4 class="user-text-warning">22</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- Place these within your dashboard content where appropriate -->
-                        <div class="col-md-12">
-                            <div class="card user-card">
-                                <div class="card-header">
-                                    <h4>Recent Activity</h4>
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="activity_chart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card user-card">
-                                <div class="card-header">
-                                    <h4>Statistics</h4>
-                                </div>
-                                <div class="card-body">
-                                    <canvas id="stats_chart"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-md-12">
-                            <div class="settings-widget p-3">
-                                <div class="settings-inner-blk p-0">
-                                    <div class="recent-activities-head comman-space">
-                                        <h3>Recent Activities</h3>
-                                    </div>
-                                    <div class="comman-space pb-0">
-                                        <div class="settings-activities-blk activity-list-blk table-responsive">
-                                            <table class="table table-nowrap mb-0">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ACTIVITY</th>
-                                                        <th>USER</th>
-                                                        <th>DATE</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <p><a href="activity-details.html">User Registration</a></p>
-                                                        </td>
-                                                        <td>Jane Smith</td>
-                                                        <td>August 5, 2024</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <p><a href="activity-details.html">Password Change</a></p>
-                                                        </td>
-                                                        <td>Mark Johnson</td>
-                                                        <td>August 4, 2024</td>
-                                                    </tr>
-                                                    <!-- Add more rows as needed -->
-                                                </tbody>
-                                            </table>
+                        <div class="row mb-4">
+                            <div class="col-md-12">
+                                <div class="settings-widget p-3">
+                                    <div class="settings-inner-blk p-0">
+                                        <div class="recent-activities-head comman-space">
+                                            <h3>Recent Activities</h3>
+                                        </div>
+                                        <div class="comman-space pb-0">
+                                            <div class="settings-activities-blk activity-list-blk table-responsive">
+                                                <table class="table table-nowrap mb-0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ACTIVITY</th>
+                                                            <th>USER</th>
+                                                            <th>DATE</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <p><a href="activity-details.html">User Registration</a>
+                                                                </p>
+                                                            </td>
+                                                            <td>Jane Smith</td>
+                                                            <td>August 5, 2024</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p><a href="activity-details.html">Password Change</a>
+                                                                </p>
+                                                            </td>
+                                                            <td>Mark Johnson</td>
+                                                            <td>August 4, 2024</td>
+                                                        </tr>
+                                                        <!-- Add more rows as needed -->
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- /Admin Dashboard -->
 
+                    <div id="loads-section" class="content-section d-none">
+                        <h2 class="mb-4">Users</h2>
+                    </div>
+
+                    <div id="messages-section" class="content-section d-none">
+                        <h2 class="mb-4">Reports</h2>
+                    </div>
+
+                    <div id="settings-section" class="content-section d-none">
+                        <h2 class="mb-4">Settings</h2>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- /Page Content -->

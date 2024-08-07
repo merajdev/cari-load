@@ -76,3 +76,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('data-target');
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.add('d-none');
+        });
+        document.getElementById(targetId).classList.remove('d-none');
+    });
+});
